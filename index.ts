@@ -1,6 +1,6 @@
 import slugify from 'slugify'
 import escaper from 'escaper/src/escaper.js'
-import { default as stripComments } from 'strip-css-comments'
+import { stripCSSComments } from './strip-css-comments'
 
 export function scopeCSS(css: string, parent: string, o?: string) {
   if (!css) return css
@@ -61,7 +61,7 @@ export function scopeCSS(css: string, parent: string, o?: string) {
 export function replace(css: string, replacer: string) {
   const arr: string[] = []
 
-  css = stripComments(css)
+  css = stripCSSComments(css)
 
   // escape strings etc.
   css = escaper.replace(css, true, arr)
