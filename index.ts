@@ -1,6 +1,6 @@
 import slugify from 'slugify'
 import escaper from 'escaper/src/escaper.js'
-import stripComments from 'strip-css-comments'
+import { default as stripComments } from 'strip-css-comments'
 
 export function scopeCSS(css: string, parent: string, o?: string) {
   if (!css) return css
