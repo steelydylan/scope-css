@@ -1,8 +1,12 @@
 {
-  "name": "scope-css",
+  "name": "@steelydylan/scope-css",
   "version": "1.2.1",
   "description": "Scope each css rule with a selector, ie. nest into parent",
   "main": "index.js",
+  "types": "index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "node test.js",
     "build": "tsc ./index.ts --declaration"
